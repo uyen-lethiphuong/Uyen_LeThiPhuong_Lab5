@@ -12,7 +12,7 @@ namespace Uyen_LeThiPhuong_Lab5
             builder.Services.AddControllersWithViews();
             builder.Services.AddHttpClient<IRiskPredictionService, RiskPredictionService>(client =>
             {
-                client.BaseAddress = new Uri("https://localhost:52429");
+                client.BaseAddress = new Uri("https://localhost:49861");
             });
             var app = builder.Build();
 
