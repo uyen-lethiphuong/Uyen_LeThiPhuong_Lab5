@@ -5,6 +5,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="RiskClassificationModel_WebApi1\**" />
+    <Content Remove="RiskClassificationModel_WebApi1\**" />
+    <EmbeddedResource Remove="RiskClassificationModel_WebApi1\**" />
+    <None Remove="RiskClassificationModel_WebApi1\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="5.0.0" />
     <PackageReference Include="Microsoft.ML.LightGbm" Version="5.0.0" />
   </ItemGroup>
