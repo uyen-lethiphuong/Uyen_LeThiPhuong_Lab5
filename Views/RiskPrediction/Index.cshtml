@@ -1,0 +1,115 @@
+﻿@model Uyen_LeThiPhuong_Lab5.Models.RiskPredictionViewModel
+
+@{
+    ViewData["Title"] = "Predicția Riscului";
+}
+
+<h2 class="text-center mt-4">Predicția Riscului Alimentar</h2>
+<hr />
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form asp-action="Index" method="post">
+
+                    <!-- Tipul Inspecției (Inspection Type) -->
+                    <div class="form-group mb-3">
+                        <label class="control-label fw-bold">Tipul Inspecției</label>
+                        <input asp-for="InspectionType" class="form-control" placeholder="Ex: Routine - Unscheduled" />
+                    </div>
+
+                    <!-- Descrierea Abaterii (Violation Description) -->
+                    <div class="form-group mb-3">
+                        <label class="control-label fw-bold">Descrierea Abaterii</label>
+                        <textarea asp-for="ViolationDescription" class="form-control" rows="3" placeholder="Ex: High risk vermin infestation"></textarea>
+                    </div>
+
+                    <!-- Butonul de trimitere -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Estimează Riscul</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hiển thị kết quả -->
+@if (!string.IsNullOrEmpty(Model.PredictedRisk))
+{
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="alert alert-success text-center">
+                <h4>Rezultatul Predicției: <strong>@Model.PredictedRisk</strong></h4>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
